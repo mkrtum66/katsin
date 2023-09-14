@@ -41,11 +41,11 @@ const Sidebar = ({ showSideBar, setShowSideBar, setSideRef }) => {
           <li onClick={() => handleNavigate()}>
             <NavLink to={'https://pos.toasttab.com/'}>Katsin Cards</NavLink>
           </li>
-          {/*<li onClick={() => handleNavigate()}>*/}
-          {/*  <NavLink to={'/'}>Dress Code</NavLink>*/}
-          {/*</li>*/}
           <li onClick={() => handleNavigate()}>
             <NavLink to={'/vip'}>Book VIP Room</NavLink>
+          </li>
+          <li onClick={() => handleNavigate()}>
+            <NavLink to={'/parking'}>Parking</NavLink>
           </li>
         </ul>
       </div>
