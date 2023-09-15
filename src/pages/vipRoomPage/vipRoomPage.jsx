@@ -9,11 +9,13 @@ const VipRoomPage = () => {
     <div className="vipRoomPage">
       <div className="container">
         <div className="info">
-          <h3>
-            VIP Room reservation Call! <br />
-            <Button onClick={() => window.open('tel:+18186393030', '_self')}>Call</Button>
+          <h3 className="d-flex align-items-center">
+            <p className="m-0">VIP Room Reservation</p>
+            <Button variant={'outline'} onClick={() => window.open('tel:+18186393030', '_self')}>
+              Call Now
+            </Button>
           </h3>
-          <p className="mb-4">
+          <p className="mb-2">
             At Katsin, we believe in providing an exceptional dining experience that goes above and
             beyond. Our VIP Room is an exclusive haven designed to cater to your every culinary
             desire, ensuring your visit is nothing short of extraordinary.
