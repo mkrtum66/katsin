@@ -5,7 +5,7 @@ const ParkingPage = () => {
   return (
     <div className="parkingPage pageWrapper">
       <div className="container">
-        <h1>parkingPage</h1>
+        <h1>Parking Page</h1>
       </div>
     </div>
   );

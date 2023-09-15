@@ -17,7 +17,7 @@ const FoodMenuPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoaded(false);
-    }, 500);
+    }, 2000);
   }, []);
 
   return (
@@ -25,15 +25,7 @@ const FoodMenuPage = () => {
       <ScrollToHeader links={foodMenu} setMyRef={setMyRef} />
       {!isLoaded ? (
         <>
-          <video
-            className="video-background"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload={'metadata'}
-            // onLoadStart={() => console.log('start')}
-          >
+          <video className="video-background" autoPlay muted loop playsInline preload={'metadata'}>
             <source src={video} type="video/mp4" />
           </video>
           <div className="container">
@@ -58,9 +50,7 @@ const FoodMenuPage = () => {
           </div>
         </>
       ) : (
-        <div className="pt-5 w-100 d-flex justify-content-center">
-          <Loader />
-        </div>
+        <Loader />
       )}
     </div>
   );
