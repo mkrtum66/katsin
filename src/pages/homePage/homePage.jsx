@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './homePage.scss';
 import video from '../../assets/video/video.mp4';
 import Slider from '../../components/slider';
@@ -7,17 +7,9 @@ import { scrollToSection } from '../../utils/scrollToSection';
 
 import cocktail from '../../assets/images/cocktail.jpg';
 import { useNavigate } from 'react-router';
-import Loader from '../../components/loader';
 
 const HomePage = ({ sideRef }) => {
-  const [isLoaded, setIsLoaded] = useState(true);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(false);
-    }, 2000);
-  }, []);
 
   useEffect(() => {
     scrollToSection(sideRef);
@@ -32,21 +24,17 @@ const HomePage = ({ sideRef }) => {
 
   return (
     <div className="homePageWrapper">
-      {isLoaded ? (
-        <Loader />
-      ) : (
-        <div className="homePage">
-          <video className="video-background" autoPlay muted loop playsInline preload={'metadata'}>
-            <source src={video} type="video/mp4" />
-          </video>
-          <section className="section1">
-            <h3 className="animate-charcter">Katsin</h3>
-            <div className="button" onClick={() => bookNow()}>
-              Book NoW
-            </div>
-          </section>
-        </div>
-      )}
+      <div className="homePage">
+        <video className="video-background" autoPlay muted loop playsInline preload={'metadata'}>
+          <source src={video} type="video/mp4" />
+        </video>
+        <section className="section1">
+          <h3 className="animate-charcter">Katsin</h3>
+          <div className="button" onClick={() => bookNow()}>
+            Book NoW
+          </div>
+        </section>
+      </div>
       <section className="section2">
         <div className="container">
           <Slider
